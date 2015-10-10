@@ -3,5 +3,5 @@ machine:
         version: oraclejdk8
 
 dependencies:
-    override:
-        - mvn dependency:resolve -s pom.xml
+    pre:
+        - mvn -f tools/package/archetypes clean install
