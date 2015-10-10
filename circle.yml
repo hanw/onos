@@ -4,4 +4,4 @@ machine:
 
 dependencies:
     pre:
-        - mvn -f tools/package/archetypes clean install
+        - cd tools/package/archetypes && mvn clean install
