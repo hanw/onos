@@ -3,5 +3,5 @@ machine:
         version: oraclejdk8
 
 dependencies:
-    pre:
-        - cd tools/package/archetypes && mvn clean install
+    override:
+        - mvn clean install
