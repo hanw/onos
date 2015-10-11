@@ -6,7 +6,7 @@ machine:
 
 dependencies:
     override:
-        - echo "skipped" #mvn clean install -DskipTests -Dcheckstyle.skip -U -T 1C
+        - mvn clean install -DskipTests -Dcheckstyle.skip -U -T 1C
 
 test:
     override:
