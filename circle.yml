@@ -6,8 +6,7 @@ machine:
 
 dependencies:
     pre:
-        - sudo pip install -r waltz/requirements.txt
-        - echo $GITHUB_KEY
+        - go get github.com/aktau/github-release
     override:
         - echo "skipped" #mvn clean install -DskipTests -Dcheckstyle.skip -U -T 1C
 
@@ -21,4 +20,4 @@ deployment:
         commands:
             - mkdir -p ~/Downloads
             - ONOS_ROOT=~/onos ./tools/build/onos-package
-            - python waltz/bin/do_release
+            - github-release release --user hanw --repo onos --tag build-$CIRCLE_BUILD_NUM --name build-$CIRCLE_BUILD_NUM --pre-release --file /tmp/onos*.tar.gz
