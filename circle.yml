@@ -18,3 +18,4 @@ deployment:
         commands:
             - mkdir -p ~/Downloads
             - ONOS_ROOT=~/onos ./tools/build/onos-package
+            - ./waltz/bin/do_release
