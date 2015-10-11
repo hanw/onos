@@ -6,7 +6,7 @@ machine:
 
 dependencies:
     override:
-        - mvn clean install -DskipTests -Dcheckstyle.skip -U -T 1C
+        - echo "skipped" #mvn clean install -DskipTests -Dcheckstyle.skip -U -T 1C
 
 test:
     override:
@@ -15,5 +15,6 @@ test:
 deployment:
     staging:
         branch: master
-        commands: 
+        commands:
+            - mkdir -p ~/Downloads
             - ONOS_ROOT=~/onos ./tools/build/onos-package
