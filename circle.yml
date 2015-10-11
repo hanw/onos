@@ -6,7 +6,7 @@ machine:
 
 dependencies:
     pre:
-        - pip install -r waltz/requirements.txt
+        - sudo pip install -r waltz/requirements.txt
     override:
         - echo "skipped" #mvn clean install -DskipTests -Dcheckstyle.skip -U -T 1C
 
