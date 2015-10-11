@@ -4,7 +4,7 @@ machine:
 
 dependencies:
     override:
-        - mvn clean install
+        - mvn instlal -DskipTest=true -B -V
 
 test:
     override:
