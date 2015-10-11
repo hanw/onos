@@ -1,4 +1,6 @@
 machine:
+    environment:
+        ONOS_ROOT: ~/onos
     java:
         version: oraclejdk8
 
