@@ -27,5 +27,5 @@ os.system("echo '%s ChangeLog\n' > %s" % (release_name, changelog_file))
 os.system("git log --abbrev --pretty=oneline %s... >> %s" % (old_release_id, changelog_file))
 
 with open(changelog_file) as changelog:
-    changelog_details = changelog.read()
-        repo.create_git_tag_and_release(release_id, changelog_details, release_name, changelog_details, os.environ["CIRCLE_SHA1"], "commit")
+  changelog_details = changelog.read()
+  repo.create_git_tag_and_release(release_id, changelog_details, release_name, changelog_details, os.environ["CIRCLE_SHA1"], "commit")
