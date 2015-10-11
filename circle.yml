@@ -5,6 +5,8 @@ machine:
         version: oraclejdk8
 
 dependencies:
+    pre:
+        - pip install -r requirements.txt
     override:
         - echo "skipped" #mvn clean install -DskipTests -Dcheckstyle.skip -U -T 1C
 
