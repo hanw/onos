@@ -10,4 +10,10 @@ dependencies:
 
 test:
     override:
-        - ./tools/build/onos-package
+        - mvn test
+
+deployment:
+    staging:
+        branch: master
+        commands: 
+            - ./tools/build/onos-package
