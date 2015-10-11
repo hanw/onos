@@ -6,7 +6,7 @@ machine:
 
 dependencies:
     pre:
-        - pip install -r requirements.txt
+        - pip install -r waltz/requirements.txt
     override:
         - echo "skipped" #mvn clean install -DskipTests -Dcheckstyle.skip -U -T 1C
 
@@ -20,4 +20,4 @@ deployment:
         commands:
             - mkdir -p ~/Downloads
             - ONOS_ROOT=~/onos ./tools/build/onos-package
-            - python ./waltz/bin/do_release
+            - python waltz/bin/do_release
